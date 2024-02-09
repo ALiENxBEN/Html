@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stylish Telegram Icon with Custom Image</title>
+  <title>Animated Telegram Icon with Download Button</title>
   <style>
     body {
       background-color: #0088cc;
@@ -21,10 +21,25 @@
       height: 100px;
       border: 1px solid white;
       border-radius: 50%;
-      background-image: url("https://graph.org/file/4889708fff4329ab62398.jpg");
+      background-image: url("https://graph.org/file/19159cc7c05e15d00bcf3.jpg");
       background-size: cover;
       background-position: center;
       position: relative;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     .telegram-icon::before {
@@ -56,12 +71,36 @@
       color: white;
       margin-left: 20px;
     }
+
+    .download-button {
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 120px);
+      transform: translateY(-50%);
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: #0088cc;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .download-button:hover {
+      background-color: #0077bb;
+    }
+
+    .download-button:active {
+      background-color: #0066aa;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="telegram-icon"></div>
     <div class="telegram-username">@NUMBER03ANURAG</div>
+    <a href="https://telegram.dog/BEN_FILE_SHARE_bot?start=2e1ae603586a649a0c5d5ab95a16fa7a" class="download-button">Download</a>
   </div>
 </body>
 </html>
