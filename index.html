@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download Button</title>
+  <title>My Telegram Account</title>
   <style>
-    .download-button {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #f5f5f5;
-      color: #333;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
+    body {
+      background-color: #0088cc;
+      font-family: sans-serif;
     }
 
-    .download-button:hover {
-      background-color: #e5e5e5;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
     }
 
-    .download-button:active {
-      background-color: #d5d5d5;
+    .telegram-icon {
+      width: 100px;
+      height: 100px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+      position: relative;
+    }
+
+    .telegram-icon::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: #0088cc;
+    }
+
+    .telegram-icon::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .telegram-username {
+      font-size: 36px;
+      color: white;
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
-  <a href="https://telegram.dog/BEN_FILE_SHARE_bot?start=553480f1f54511896f88b9b2e204641c" class="download-button">Download</a>
+  <div class="container">
+    <div class="telegram-icon"></div>
+    <div class="telegram-username">Your Telegram Username</div>
+  </div>
 </body>
 </html>
